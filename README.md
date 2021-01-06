@@ -1,3 +1,3 @@
 # Machine Learning and Data Science blogs :
- www.srj00.github.io
+ [ SRJ00.github.io ] (https://www.SRJ00.github.io)
 
