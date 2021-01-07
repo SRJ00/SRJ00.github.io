@@ -7,11 +7,12 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: Decode ML
-description: Decode ML is the perfect place for beginner level intuition in Data Science and Machine learning with some or almost no maths. 
+description: Decode ML is the perfect place for beginner level intuition in Data Science and Machine learning with some or almost no maths.
+github_username: SRJ00
 # Email and twitter are optional:
 twitter_username: 1999_saurav
 email: sauravjadhav698@gmail.com
-github_username: SRJ00
+
 
 
 # Set this to true to get LaTeX math equation support
