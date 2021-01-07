@@ -1,5 +1,5 @@
 # About
-![](/images/
+![](/images/profile.jpg)
 
 Hi! My name is Saurav Rajendra Jadhav,  
 
