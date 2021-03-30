@@ -5,14 +5,7 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    {%- if page.description -%}
-      {%- if site.html_escape.description -%}
-        <p class="page-description">{{ page.description | escape }}</p>
-      {%- else -%}
-        <p class="page-description">{{ page.description }}</p>
-      {%- endif -%}
-    {%- endif -%}
-    <p class="post-meta post-meta-title">
+    <p class="post-meta">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {{ page.date | date: date_format }}
@@ -30,38 +23,16 @@ layout: default
             <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
-      {%- endif %}
-       • {% include reading_time.html -%}
-    </p>
-
-    {% if page.categories.size > 0 and site.show_tags %}
-      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
-      {% for category in  page.categories  %}
-        <a class="category-tags-link" href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
-        {% unless forloop.last %}&nbsp;{% endunless %}
-      {% endfor %}
-      </p>
-    {% endif %}
-
-    {% if page.layout == 'notebook' %}
-      {% if page.badges or page.badges == nil %}
-        <div class="pb-5 d-flex flex-wrap flex-justify-end">
-          {% unless page.hide_github_badge or site.default_badges.github != true %}{% include notebook_github_link.html %}{% endunless %}
-          {% unless page.hide_binder_badge or site.default_badges.binder != true  %}{% include notebook_binder_link.html %}{% endunless %}
-          {% unless page.hide_colab_badge or site.default_badges.colab != true %}{% include notebook_colab_link.html %}{% endunless %}
-        </div>
-      {% endif -%}
-    {% endif -%}
+      {%- endif -%}</p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    {{ content | toc  }}
+    {{ content }}
   </div>
-  {%- if page.comments -%}
-    {%- include utterances.html -%}
-  {%- endif -%}
+
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
+
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
