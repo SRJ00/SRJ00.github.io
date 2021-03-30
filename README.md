@@ -1,2 +1,3 @@
-# Machine Learning and Data Science blogs 
+# Decode ML 
+Machine Learning and Data Science blogs 
 
